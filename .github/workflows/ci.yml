@@ -14,3 +14,6 @@ jobs:
 
       - name: list the files
         run: ls
+
+      - name: check if the index file contains h1
+        run: grep "<h1>" index.html
