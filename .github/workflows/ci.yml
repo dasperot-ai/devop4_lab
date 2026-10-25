@@ -1,0 +1,19 @@
+name: CI
+
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "hello from github actions"
+
+      - name: get the code
+        uses: actions/checkout@v4
+
+      - name: list the files
+        run: ls
+
+      - name: check if the index file contains h1
+        run: grep "<h1>" index.html
